@@ -9,3 +9,210 @@ Completed 200 OK in 42ms (Views: 26.2ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (7.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLinks (20170123002556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170123002556"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 98.227.218.35 at 2017-01-23 00:30:17 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise" for 98.227.218.35 at 2017-01-23 00:30:23 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/devise"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.1ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-23 00:30:30 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 697ms (Views: 694.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/links/new" for 98.227.218.35 at 2017-01-23 00:30:33 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (14.5ms)
+  Rendered links/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-23 00:30:35 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.9ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  Rendered links/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/links/new" for 98.227.218.35 at 2017-01-23 00:30:36 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (3.0ms)
+  Rendered links/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/links" for 98.227.218.35 at 2017-01-23 00:31:03 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KwpHVNMCoLWELzDzpthrZO7ov+5Vn8zMBRqLxs8xljwMeeTrFp5+6I54FIlLfiVyKvIN2iMdrmmQkTLjP8M1Hw==", "link"=>{"title"=>"Check out my portfolio!", "url"=>"http://www.chuymedina.net"}, "commit"=>"Create Link"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Check out my portfolio!"], ["url", "http://www.chuymedina.net"], ["created_at", "2017-01-23 00:31:03.414435"], ["updated_at", "2017-01-23 00:31:03.414435"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Redirected to https://reddit-clone-chuymedina96.c9users.io/links/1
+Completed 302 Found in 23ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/links/1" for 98.227.218.35 at 2017-01-23 00:31:03 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT  "links".* FROM "links" WHERE "links"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered links/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-23 00:31:06 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links/new" for 98.227.218.35 at 2017-01-23 00:31:08 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (1.5ms)
+  Rendered links/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 66.102.6.5 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  Rendered links/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 66.102.6.2 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 66.102.6.5 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 66.102.6.5 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/links.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.102.6.24 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.24! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/links.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.102.6.22 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.22! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-d2e5ccad1506299feea3a35bfb7c525e101bb3b214303715deb675fdc539948b.css?body=1" for 66.102.6.2 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 66.102.6.2 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 66.102.6.20 at 2017-01-23 00:31:22 +0000
+Cannot render console from 66.102.6.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/links" for 98.227.218.35 at 2017-01-23 00:32:08 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQ+Ad+xbqtyav03xtHuhPg3QMG2uRVqZK2il+OaRaIx+fCPIKcd0gZDoaYtZ3e8oycqCWdjHODy+4xzdFmPLrw==", "link"=>{"title"=>"Cool arduino projects", "url"=>"http://www.makeuseof.com/tag/8-arduino-robots-can-build-less-125/"}, "commit"=>"Create Link"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "links" ("title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cool arduino projects"], ["url", "http://www.makeuseof.com/tag/8-arduino-robots-can-build-less-125/"], ["created_at", "2017-01-23 00:32:08.653870"], ["updated_at", "2017-01-23 00:32:08.653870"]]
+  [1m[35m (9.5ms)[0m  commit transaction
+Redirected to https://reddit-clone-chuymedina96.c9users.io/links/2
+Completed 302 Found in 13ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/links/2" for 98.227.218.35 at 2017-01-23 00:32:08 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT  "links".* FROM "links" WHERE "links"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered links/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-23 00:32:10 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links/1" for 98.227.218.35 at 2017-01-23 00:32:20 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT  "links".* FROM "links" WHERE "links"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered links/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-23 00:32:21 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
