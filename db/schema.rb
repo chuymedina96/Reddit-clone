@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170123002556) do
-=======
 ActiveRecord::Schema.define(version: 20170126222637) do
->>>>>>> link_scaffold
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
@@ -23,8 +19,6 @@ ActiveRecord::Schema.define(version: 20170126222637) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-<<<<<<< HEAD
-=======
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -43,6 +37,5 @@ ActiveRecord::Schema.define(version: 20170126222637) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
->>>>>>> link_scaffold
 
 end
