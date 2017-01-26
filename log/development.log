@@ -509,3 +509,47 @@ Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.5ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started GET "/" for 98.227.218.35 at 2017-01-26 22:48:04 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  Rendered links/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 98.227.218.35 at 2017-01-26 22:48:06 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c+SOdVIFUISQd5HhT2pwyJsN7YUMc1DNsCmwSaHL+RPmNW3XzWHraMdzMMhMVvMMAoR2ar6eQ3JGno3LyHQXpg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://reddit-clone-chuymedina96.c9users.io/
+Completed 302 Found in 177ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 98.227.218.35 at 2017-01-26 22:48:07 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/links/new" for 98.227.218.35 at 2017-01-26 22:48:11 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (3.8ms)
+  Rendered links/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 98.227.218.35 at 2017-01-26 22:48:12 +0000
+Cannot render console from 98.227.218.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  Rendered links/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
