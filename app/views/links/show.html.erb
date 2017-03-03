@@ -1,5 +1,6 @@
+<link ref="stylesheet" href="../../assets/stylesheets/animate.css"/>
 <div class="page-header">
-  <h1><a href="<%- @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.user %></small> </h1>
+  <h1><a href="<%- @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.user.name if @link.user %></small> </h1>
 </div>
 
 <div class="btn-group">
@@ -25,4 +26,30 @@
     <%= @link.get_downvotes.size %>
   <% end %>
 </div>
+
+<h3 class="comments_title">
+  <%= @link.comments.count %> Comments
+</h3>
+
+<div id="comments">
+  <%= render :partial => @link.comments %>
+</div>
+<%= simple_form_for [@link, Comment.new]  do |f| %>
+  <div class="field">
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
+
+<script>
+  $(document).ready(function() {
+    $(".page-header").addClass("animated rollIn");
+  });
+  $(document).ready(function() {
+    $("#comments").addClass("animated slideInRight");
+  });
+  
+</script>
+
 
